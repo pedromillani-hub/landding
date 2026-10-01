@@ -1,0 +1,384 @@
+/* ---------- Estrutura ---------- */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  
+  .secao {
+    padding: 5rem 0;
+  }
+  
+  .secao h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .secao-intro {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+  }
+  
+  .secao-clara {
+    background: var(--claro);
+  }
+  
+  .secao-escura {
+    background: var(--azul-escuro);
+    color: #fff;
+  }
+  
+  /* ---------- Cabeçalho ---------- */
+  .cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--azul-escuro);
+    color: #fff;
+  }
+  
+  .cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    gap: 1rem;
+  }
+  
+  .marca {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+  }
+  
+  .marca-simbolo {
+    background: var(--ambar);
+    color: var(--azul-escuro);
+    padding: 0.1rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .menu a {
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .menu a:hover {
+    border-color: var(--ambar);
+  }
+  
+  .menu-botao {
+    display: none;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 1.25rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--azul-escuro);
+    color: #fff;
+    padding: 5rem 0 6rem;
+  }
+  
+  .hero-conteudo {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  .hero p {
+    font-size: 1.15rem;
+    max-width: 45ch;
+    color: #cfdbe8;
+    margin-bottom: 2rem;
+  }
+  
+  .botao {
+    display: inline-block;
+    background: var(--ambar);
+    color: var(--azul-escuro);
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--raio);
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  .botao:hover {
+    transform: translateY(-2px);
+    background: #ffd36e;
+  }
+  
+  .botao-claro {
+    background: #fff;
+  }
+  
+  .editor {
+    background: #071626;
+    border: 1px solid #1d3a5a;
+    border-radius: var(--raio);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+  }
+  
+  .editor-barra {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1rem;
+    background: #0f2d4a;
+  }
+  
+  .editor-barra span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #4b6b8a;
+  }
+  
+  .editor-barra span:first-child {
+    background: var(--ambar);
+  }
+  
+  .editor-barra small {
+    margin-left: auto;
+    color: #8fa8c0;
+  }
+  
+  .editor pre {
+    margin: 0;
+    padding: 1.25rem;
+    overflow-x: auto;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #9fd0ff;
+  }
+  
+  /* ---------- Sobre ---------- */
+  .sobre-grade {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  
+  .sobre-texto p {
+    max-width: 60ch;
+  }
+  
+  .sobre-destaque {
+    background: #fff;
+    border-left: 5px solid var(--azul);
+    border-radius: var(--raio);
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(11, 34, 57, 0.08);
+  }
+  
+  .sobre-destaque h3 {
+    font-size: 1.2rem;
+  }
+  
+  .sobre-destaque ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  
+  .sobre-destaque li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ---------- Grades e cards ---------- */
+  .grade {
+    display: grid;
+    gap: 1.25rem;
+  }
+  
+  .grade-4 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .grade-3 {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: var(--raio);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(11, 34, 57, 0.12);
+  }
+  
+  .card h3 {
+    font-size: 1.15rem;
+  }
+  
+  .card p {
+    margin: 0;
+    color: #475a6d;
+  }
+  
+  .card-icone {
+    display: block;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-projeto {
+    border-top: 4px solid var(--azul);
+  }
+  
+  /* ---------- Tecnologias ---------- */
+  .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tecnologias li {
+    font-family: var(--fonte-titulo);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid var(--azul);
+    border-radius: 999px;
+    background: rgba(10, 92, 184, 0.2);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  
+  .tecnologias li:hover {
+    background: var(--azul);
+    border-color: var(--ambar);
+  }
+  
+  /* ---------- Áreas de atuação ---------- */
+  .area {
+    padding: 1.25rem 1.5rem;
+    border-left: 5px solid var(--ambar);
+    background: var(--claro);
+    border-radius: 0 var(--raio) var(--raio) 0;
+    font-weight: 600;
+  }
+  
+  /* ---------- Chamada para ação ---------- */
+  .cta {
+    background: var(--azul);
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  
+  .cta h2 {
+    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+    max-width: 22ch;
+    margin: 0 auto 1rem;
+  }
+  
+  .cta p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* ---------- Rodapé ---------- */
+  .rodape {
+    background: var(--azul-escuro);
+    color: #b8c7d6;
+    padding: 1.75rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .rodape p {
+    margin: 0;
+  }
+  
+  /* ---------- Tablet ---------- */
+  @media (max-width: 900px) {
+    .hero-conteudo,
+    .sobre-grade {
+      grid-template-columns: 1fr;
+    }
+  
+    .menu {
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* ---------- Celular ---------- */
+  @media (max-width: 720px) {
+    .secao,
+    .cta {
+      padding: 3.5rem 0;
+    }
+  
+    .hero {
+      padding: 3rem 0 4rem;
+    }
+  
+    .menu-botao {
+      display: block;
+    }
+  
+    .menu {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--azul-escuro);
+      padding: 0.5rem 1.25rem 1rem;
+      border-top: 1px solid #1d3a5a;
+    }
+  
+    .menu.aberto {
+      display: flex;
+    }
+  
+    .menu a {
+      padding: 0.8rem 0;
+      font-size: 1rem;
+    }
+  
+    .rodape-conteudo {
+      flex-direction: column;
+    }
+  }
